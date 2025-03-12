@@ -1,7 +1,5 @@
 # GreenPulse - Renewable Energy Management System
 
-![GreenPulse Logo](images_frontend/a.jpg)
-
 **GreenPulse** is a comprehensive platform designed to monitor, optimize, and control renewable energy systems (solar, wind, ocean, etc.) for efficient energy generation, storage, and distribution. It provides real-time insights, predictive analytics, and optimization tools to help stakeholders make data-driven decisions.
 
 ---
