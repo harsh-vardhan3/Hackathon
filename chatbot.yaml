@@ -1,0 +1,42 @@
+# version format ex. "0.0.1"
+version: "0.0.1"
+
+# Basic metadata for the agent
+metadata:
+  name: "farmers-help"
+  description: "This flow helps you to generate the responses related to the crops and related fields"
+  author: "sanchit" # This username should match your account username
+  tags: [farm,crop,pesticides,resources,finances] # Tags are keywords used to categorize your flow
+  private: true # Access control for your flows (true/false)
+
+# Define the input variables required
+inputs:
+  lang:
+    type: string #Currently we only support String format
+    description: "Prefered language"
+    required: true
+    example: "Hindi,Tamil,Telugu,etc."
+  detail:
+    type: string #Currently we only support String format
+    description: "Query related to the farmers"
+    required: true
+    example: "Which crop is good this year in manipur,why rice keeps failing"
+
+# LLM configuration
+model:
+  provider: "anthropic" # e.g., anthropic, openai, meta, etc.
+  name: "claude-3.5-sonnet"
+
+# For supported LLM models, refer to the documentation: https://docs.mira.network/sdk/core-concepts
+
+# # Dataset configuration (Optional)
+# dataset:
+#   source: "author_name/dataset_name" # Make sure this data set exists
+
+# Prompt template configuration
+prompt: |
+  Give me the respones of the query in {lang} about the query {detail}
+
+# ReadME configuration
+readme: |
+  This flow helps the farmers query
